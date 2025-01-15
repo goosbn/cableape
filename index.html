@@ -78,8 +78,11 @@
         <script> function disableRightClick() {
             alert("press ok to be cool rat guy");
             window.location.href = '../discorat';
-            return false;</script>
-<body> oncontextmenu="return disableRightClick();">
+            return false;
+}
+        </script>
+         </head>
+<body oncontextmenu="return disableRightClick();">
   <div class="dropdown">
         <span onmouseover="changeText('&#8681;Links&#8681;')" onmouseout="changeText('&#8679;Links&#8679;')">&#8679;Links&#8679;</span>
         <div class="dropdown-menu">
@@ -90,5 +93,4 @@
 
 
     
-</body>     
-    </head>
+</body>    
