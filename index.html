@@ -22,6 +22,56 @@
     <meta property="twitter:image" content="https://cableape.vercel.app/discorat/media/gnomechild.png" />
 
         
+ .dropdown {
+            position: relative;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .dropdown span {
+            cursor: pointer;
+            font-size: 16pt;
+            color: rgb(42, 104, 20);
+            transition: transform 0.2s;
+        }
+
+        .dropdown span:hover {
+            transform: scale(1.1);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #232323;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+
+        .dropdown-menu p {
+            margin: 0;
+        }
+
+        .dropdown-item {
+            padding: 10px;
+            color: lightgreen;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dropdown-item:hover {
+            background-color: #323232;
+            color: Chartreuse;
+        }
+
+        /* Show dropdown menu on hover */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
 
 
     </head>
@@ -29,10 +79,26 @@
  <div id="header">
     <h1 class="header">cableape</h1>   
  </div> 
+
+          <div class="dropdown">
+        <span onmouseover="changeText('&#8681;Stuff&#8681;')" onmouseout="changeText('&#8679;Stuff&#8679;')">&#8679;Stuff&#8679;</span>
+        <div class="dropdown-menu">
+            <p><a href="https://github.com/goosbn" class="dropdown-item" target="_blank">My Github</a></p>
+            <p><a href="https://mlew.vercel.app" class="dropdown-item" target="_blank">MLEW</a></p>
+            <p><a href="kabelaffevrsa.vercel.app" class="dropdown-item" target="_blank">KabelAffe</a></p>
+        </div>
+    </div>
+
+    <script>
+        function changeText(text) {
+            document.querySelector('.dropdown span').innerHTML = text;
+        }
+    </script>
  
 
        <footer>
            <p>@goosbnbomber,2025</p>
+        <p>baltimore>minnesota</p>
        </footer> 
     </body>
 </html>
